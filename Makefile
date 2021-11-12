@@ -1,5 +1,5 @@
 --dependencies = logger.c
---libraries = -lpthread
+--libraries = `pkg-config fuse3 --cflags --libs`
 --build-dir = build
 --main-file = main.c
 --output-filename = main.out
@@ -14,7 +14,7 @@
 main: ${--main-file} ${--dependencies}
 	@echo "Compiling..."
 	@mkdir -p ${--build-dir}
-	@gcc ${--main-file} ${--dependencies}  ${--libraries} -o ${--output-filepath}
+	@gcc ${--main-file} ${--dependencies} ${--libraries} -o ${--output-filepath}
 	@echo "Compiled to \"${--output-filepath}\""
 
 test: ${--test-filepath} ${--dependencies}
