@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <sys/time.h>
 
-#include "../ds.h"
 #include "../logger.h"
 
 int total_tests = 0;
