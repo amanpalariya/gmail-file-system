@@ -1,7 +1,3 @@
-Submitter name: Aman Palariya
-Roll No: 2019CSB1068
-Course: CS303
-
 # What does the program do?
 It creates a FUSE based filesystem. This filesystem fetches the contents from the e-mail account provided in config.txt. Using this the email-account can be used as a storage device. Like a simple version of Google Drive for non-binary data. It uses the libcurl and libfuse libraries to achieve this. The functions supported by this program are create, getattr, mkdir, rmdir, read, write, unlink, and rename. The contens of the mountpoint are fetched on the fly and not stored on the client device. Slow internet connection may result in bad performance of the program.
 
